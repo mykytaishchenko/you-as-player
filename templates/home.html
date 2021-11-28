@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <title>Player Level</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<nav class="black">
+    <a href="/me">
+        <p>Особистий кабінет</p>
+    </a>
+</nav>
+
+<div class="block">
+    <div class="white content">
+        <p>Якого рівня твій персонаж?</p>
+    </div>
+
+</div>
+
+<div class="block">
+    <div class="black content">
+        <p>чи було вам колись цікаво, який би рівень
+            був у вас в тій чи іншій грі? або які навички
+            ви б мали в якомусь фільмі, книзі або аніме?
+        </p>
+    </div>
+</div>
+
+<div class="block">
+    <div class="white content">
+        <p>Увійти у аккаунт або створити новий:</p>
+
+        <form action="/login">
+            <button>Google</button>
+        </form>
+    </div>
+</div>
+
+<div class="block">
+    <div class="black content">
+        <p>поділися посиланням на твій бланк зі своїми знайомими,
+            щоб він об'єктивно оцінили тебе.
+        </p>
+    </div>
+</div>
+
+<div class="block">
+    <div class="white content">
+        <p>поділитися бланком:</p>
+        <form action="/me">
+            <button>Твій бланк</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

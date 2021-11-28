@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <title>Player Level</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='style.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function copytext(el) {
+            var $tmp = $("<textarea>");
+            $("body").append($tmp);
+            $tmp.val($(el).text()).select();
+            document.execCommand("copy");
+            $tmp.remove();
+        }
+    </script>
+</head>
+<body>
+
+<nav class="black">
+    <a href="/">
+        <p>Головна</p>
+    </a>
+</nav>
+
+<div class="block">
+    <div class="white content">
+
+    <form method="post">
+        {% for j in range(1, 15) %}
+            <div>
+                <p>{{ j }}. {{ topics[j-1] }}</p>
+                {% for i in range(1, 11) %}
+                    {% if i == 6 %} <br> {% endif %}
+                    <input id="radio-{{ j }}-{{ i }}" type="radio" name="radio-{{ j }}" value="{{ i }}" {% if i == 1 %}
+                           checked {% endif %}>
+                    <label for="radio-{{ j }}-{{ i }}">{{ i }}</label>
+                {% endfor %}
+                <br><br>
+            </div>
+        {% endfor %}
+    <button type="submit">Завершити</button>
+    </form>
+
+
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@100&display=swap');
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    line-height: 24px;
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    height: 60px;
+    display: table;
+    width: 100%;
+}
+
+nav a {
+    display: table-cell;
+    vertical-align: middle;
+    text-decoration: none;
+    color: white;
+    width: 40%;
+}
+
+.block {
+    display: table;
+    height: 100vh;
+    width: 100%;
+}
+
+.content {
+    vertical-align: middle;
+    display: table-cell;
+    line-height: 3;
+    text-transform: uppercase;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.content p {
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+.copy {
+    font-size: 12px;
+    color: white;
+    background-color: green;
+    padding: 5px;
+}
+
+.white {
+    background-color: white;
+    color: black;
+    font-size: 24px;
+}
+
+.black {
+    background-color: black;
+    color: white;
+    font-size: 16px;
+}
+
+.content button {
+    max-width: 300px;
+    min-width: 200px;
+    width: 40%;
+    height: 50px;
+    background-color: black;
+    font: 18px "Press Start 2P";
+    padding: 10px;
+    border-color: black;
+    color: white;
+}
+
+.content button:hover {
+    background-color: white;
+    color: black;
+}
+
+.row {
+    display: table;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.col {
+    display: table-cell;
+    width: 50%;
+    min-width: 300px;
+    font-size: 16px;
+}
+
+.content img {
+    text-align: center;
+    border-radius: 50%;
+    width: 120px;
+}
+
+.stats {
+    text-align: left;
+    font-size: 18px;
+}
+
+table.delivery {
+    width: 100%;
+    border: 0px;
+    border-collapse: collapse;
+}
+
+table.delivery thead {
+    font-weight: bold;
+}
+
+table.delivery td {
+    padding: 0.6rem 1rem;
+    border-bottom: 1px solid #e8e9eb;
+}
+
+@media (max-width: 600px) {
+    .col {
+        width: 100%;
+        display: block;
+    }
+}
+
+
+
+input[type=radio] {
+  display: none;
+}
+
+input[type=radio]+label {
+  display: inline-block;
+  margin: -2px;
+  padding: 4px 12px;
+  margin-bottom: 0;
+  font-size: 10px;
+  line-height: 20px;
+  color: #000000;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+    border: 1px solid black;
+  background-color: #ffffff;
+
+}
+
+input[type=radio]:checked+label {
+  background-image: none;
+  outline: 0;
+  background-color: #000000;
+    color: white;
+}

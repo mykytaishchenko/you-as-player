@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <title>Player Level</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='style.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function copytext(el) {
+            var $tmp = $("<textarea>");
+            $("body").append($tmp);
+            $tmp.val($(el).text()).select();
+            document.execCommand("copy");
+            $tmp.remove();
+        }
+    </script>
+</head>
+<body>
+
+<nav class="black">
+    <a href="/">
+        <p>Головна</p>
+    </a>
+</nav>
+
+<div class="block">
+    <div class="white content">
+        <img src="{{ user.photo }}">
+        <p>{{ user.name }} {{ user.surname }}</p>
+        <form action="/grade/{{ user.id }}">
+            <button>Оцінити</button>
+        </form>
+        <p>Вже оцінило: {{ graded }}</p>
+        <hr>
+
+        <div class="stats">
+            <p>
+                <mark>Сила:</mark>
+                {{ user.form.stats().force }}</p>
+            <p>
+                <mark>Cпритність:</mark>
+                {{ user.form.stats().agility }}</p>
+            <p>
+                <mark>Швидкість:</mark>
+                {{ user.form.stats().speed }}</p>
+            <p>
+                <mark>Краса:</mark>
+                {{ user.form.stats().beauty }}</p>
+            <p>
+                <mark>Статура:</mark>
+                {{ user.form.stats().physique }}</p>
+            <p>
+                <mark>Інтелект:</mark>
+                {{ user.form.stats().intelligence }}</p>
+            <p>
+                <mark>Мудрість:</mark>
+                {{ user.form.stats().wisdom }}</p>
+            <p>
+                <mark>Стресостійкість:</mark>
+                {{ user.form.stats().stress_tolerance }}</p>
+            <p>
+                <mark>Креативність:</mark>
+                {{ user.form.stats().creativity }}</p>
+            <p>
+                <mark>Харизма:</mark>
+                {{ user.form.stats().charisma }}</p>
+            <p>
+                <mark>Социалізація:</mark>
+                {{ user.form.stats().sociability }}</p>
+            <p>
+                <mark>Надійність:</mark>
+                {{ user.form.stats().reliability }}</p>
+            <p>
+                <mark>Лідерські навички:</mark>
+                {{ user.form.stats().leadership_skills }}</p>
+            <p>
+                <mark>Особливі навички:</mark>
+                {{ user.form.stats().special_skills }}</p>
+
+            <hr>
+
+            <p>
+                <mark>Рівень:</mark>
+                {{ user.form.stats().average() }}</p>
+        </div>
+
+
+    </div>
+</div>
+
+</body>
+</html>
